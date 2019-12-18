@@ -2,24 +2,31 @@
     "name" : "Socialbase blocker",
     "version": "1.0",
     "description": "Socialbase blocker",
-    "manifest_version": 2,
     "icons": {
         "16": "icon16.png",
         "48": "icon48.png",
+        "96": "icon96.png",
         "128": "icon128.png"
     },
-    "permissions": ["storage", "tabs", "http://*/*", "https://*/*", "webRequest", "webRequestBlocking"],
+    "permissions": ["storage", "activeTab", "tabs", "http://*/*", "https://*/*"],
     "content_scripts": [
         {
             "matches": ["https://senior.socialbase.com.br/*"],
-            "run_at" : "document_end",
             "all_frames": true,
-            "js": ["blocker.js"]
+            "js": ["./blocker.js"]
         }
     ],
     "background": {
         "scripts": ["blocker.js"],
         "persistent": true
     },
-    "options_page": "options.html"
+    "browser_action": {
+        "default_title": "SocialBase Blocker",
+        "default_popup": "options.html",
+        "browser_style": true,
+        "default_icon": {
+            "128": "icon128.png"
+        }
+    },
+    "manifest_version": 2
 }
