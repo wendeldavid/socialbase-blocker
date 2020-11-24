@@ -4,14 +4,13 @@ function block() {
     var aTags = document.getElementsByTagName('a');
 
     chrome.storage.local.get(["block_list"], function(data) {
-        var list = '' + data.block_list;
-        var blockList = list.split(',');
+        var blockList = data.block_list;
 
         for (var i = 0; i < aTags.length; i++) {
 
             for (var j = 0; j < blockList.length; j++) {
 
-                var searchText = blockList[j];
+                var searchText = blockList[j].name;
 
                 if (aTags[i].className.includes('feed-item__link') && aTags[i].innerHTML.includes(searchText.trim())) {
 
