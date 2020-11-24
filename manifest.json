@@ -8,7 +8,7 @@
         "48": "icon48.png",
         "128": "icon128.png"
     },
-    "permissions": ["storage", "tabs", "http://*/*", "https://*/*", "webRequest", "webRequestBlocking"],
+    "permissions": ["storage", "tabs", "http://*/*", "https://*/*", "webRequest", "webRequestBlocking", "contextMenus"],
     "content_scripts": [
         {
             "matches": ["https://senior.socialbase.com.br/*"],

@@ -1,4 +1,4 @@
-console.log('loading modafoca extension');
+console.log('loading extension');
 
 function block() {
     var aTags = document.getElementsByTagName('a');
@@ -18,11 +18,11 @@ function block() {
                     var found = aTags[i];
                     // console.log(found);
 
-                    var block = found.parentElement.parentElement.parentElement.parentElement.parentElement
+                    var blockElement = found.parentElement.parentElement.parentElement.parentElement.parentElement
                     .parentElement.parentElement.parentElement.parentElement.parentElement
                     
                     // console.log('blocking...');
-                    block.style.display = 'none';
+                    blockElement.style.display = 'none';
                 }
             }
         }
