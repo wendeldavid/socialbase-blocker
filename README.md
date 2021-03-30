@@ -15,8 +15,6 @@ Block de usuários no SocialBase
 
 - Com a extensão adicionada, clicar no ícone da mesma > opções;
 
-- Vai abrir uma página com uma caixa para inserir o nome das pessoas que gostaria de bloquear;
-
-- Adicionar os nomes separados por vírgula e salvar;
+- Vai abrir uma página com uma caixa para inserir o nome das pessoas que gostaria de bloquear e clicar no botão `Salvar`;
 
 - Pronto, basta recarregar o social.
